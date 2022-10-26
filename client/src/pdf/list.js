@@ -69,6 +69,7 @@ export default function PDFList() {
  // This following section will display the table with the pdfs of individuals.
  return (
    <div>
+    <br></br>
      <h3>PDF List</h3>
      <table className="table table-striped" style={{ marginTop: 20 }}>
        <thead>
