@@ -5,7 +5,7 @@ function Home() {
     <div className="Home">
       <header className="Home-header">
         <body>
-            <h1> Bienvenidoa  la pagina</h1>
+            <h1> Front de la segunda H.U.</h1>
         </body>
       </header>
     </div>

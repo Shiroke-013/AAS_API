@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
- 
+
 const Pdf = (props) => (
  <tr>
    <td>{props.pdf.namedoc}</td>
@@ -53,6 +54,12 @@ export default function PDFList() {
    setPdfs(newPdfs);
  }
  
+ let navigate = useNavigate(); 
+ const routeChange = () =>{ 
+   let path = `/pdfcreation`; 
+   navigate(path);
+ } 
+
  // This method will map out the pdfs on the table
  function pdfList() {
    return pdfs.map((pdf) => {
@@ -71,6 +78,11 @@ export default function PDFList() {
    <div>
     <br></br>
      <h3>PDF List</h3>
+     <button color="primary" className="px-4"
+            onClick={routeChange}
+              >
+              Nuevo PDF
+            </button>
      <table className="table table-striped" style={{ marginTop: 20 }}>
        <thead>
          <tr>

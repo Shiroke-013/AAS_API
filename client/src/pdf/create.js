@@ -22,7 +22,7 @@ export default function Create() {
  async function onSubmit(e) {
    e.preventDefault();
  
-   // When a post request is sent to the create url, we'll add a new crop to the database.
+   // When a post request is sent to the create url, we'll add a new pdf to the database.
    const newPerson = { ...form };
  
    await fetch("http://localhost:5000/pdflist/add", {
@@ -99,7 +99,7 @@ export default function Create() {
        <div className="form-group">
          <input
            type="submit"
-           value="Create PDF"
+           value="Crear PDF"
            className="btn btn-primary"
          />
        </div>
