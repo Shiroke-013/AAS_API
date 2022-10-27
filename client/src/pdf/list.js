@@ -78,11 +78,9 @@ export default function PDFList() {
    <div>
     <br></br>
      <h3>PDF List</h3>
-     <button color="primary" className="px-4"
-            onClick={routeChange}
-              >
-              Nuevo PDF
-            </button>
+     <button color="primary" className="px-4"onClick={routeChange}>
+          Nuevo PDF
+    </button>
      <table className="table table-striped" style={{ marginTop: 20 }}>
        <thead>
          <tr>

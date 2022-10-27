@@ -96,6 +96,7 @@ export default function Create() {
            onChange={(e) => updateForm({ date: e.target.value })}
          />
        </div>
+       <br></br>
        <div className="form-group">
          <input
            type="submit"
