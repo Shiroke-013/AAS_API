@@ -52,10 +52,10 @@ export default function Edit() {
    e.preventDefault();
    const editedPDF = {
      namedoc: form.namedoc,
-     //author: form.author,
-     //title: form.title,
-     //content: form.content,
-     //date: form.date
+     author: form.author,
+     title: form.title,
+     content: form.content,
+     date: form.date
    };
  
    // This will send a post request to update the data in the database.
