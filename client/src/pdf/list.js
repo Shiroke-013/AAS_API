@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+var backend = '34.168.119.233'
 const Pdf = (props) => (
  <tr>
    <td>{props.pdf.namedoc}</td>
@@ -27,7 +28,7 @@ export default function PDFList() {
  // This method fetches the pdfs from the database.
  useEffect(() => {
    async function getPdfs() {
-     const response = await fetch(`http://localhost:5000/pdflist/`);
+     const response = await fetch(`http://`+backend+`:5000/pdflist/`);
  
      if (!response.ok) {
        const message = `An error occurred: ${response.statusText}`;
@@ -46,7 +47,7 @@ export default function PDFList() {
  
  // This method will delete a pdf
  async function deletePdf(id) {
-   await fetch(`http://localhost:5000/pdflist/delete/${id}`, {
+   await fetch(`http://`+backend+`:5000/pdflist/delete/${id}`, {
      method: "DELETE"
    });
  

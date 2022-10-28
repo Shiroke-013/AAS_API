@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
- 
+
+var backend = '34.168.119.233'
+
 export default function Edit() {
  const [form, setForm] = useState({
    namedoc: "",
@@ -16,7 +18,7 @@ export default function Edit() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`http://localhost:5000/pdflist/${params.id.toString()}`);
+     const response = await fetch(`http://`+backend+`:5000/pdflist/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -57,7 +59,7 @@ export default function Edit() {
    };
  
    // This will send a post request to update the data in the database.
-   await fetch(`http://localhost:5000/pdflist/update/${params.id}`, {
+   await fetch(`http://`+backend+`:5000/pdflist/update/${params.id}`, {
      method: "POST",
      body: JSON.stringify(editedPDF),
      headers: {

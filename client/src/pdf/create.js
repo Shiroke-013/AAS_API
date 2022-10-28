@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
- 
+
+var backend = '34.168.119.233'
 export default function Create() {
  const [form, setForm] = useState({
    namedoc: "",
@@ -25,7 +26,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new pdf to the database.
    const newPerson = { ...form };
  
-   await fetch("http://localhost:5000/pdflist/add", {
+   await fetch("http://"+backend+":5000/pdflist/add", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
